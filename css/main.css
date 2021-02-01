@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.typed-text {
+  font-weight: normal;
+  color: #32dd65;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  animation: blink 1s infinite; /* We will use keyframes to make te blinking animation take effect */
+}
+
+.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc; /* Makes the animation appear rapidly before it becomes transparent */
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent; /* Makes the animation appear rapidly before it becomes visible again */
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
